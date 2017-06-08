@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>snake</title>
+	<script src="functionxin.js"></script>
+	<script src="snake.js"></script>
+</head>
+<style>
+	body{
+		overflow: hidden;
+	}
+	#box{
+		width: 500px;
+		height: 500px;
+		border: 1px solid #000;
+		margin:100px auto;
+		overflow: hidden;  
+		background-image:url(yinhe.png); 
+		background-repeat:no-repeat; 
+	}
+	#box div{
+		width: 25px;
+		height: 25px;
+		float: left;
+		font-size: 5px;
+		/*border: 1px solid #000;*/
+	}
+	.food{
+		/*background-color: #DCE0FF;*/
+		background-color:#eee;
+	}
+	.snake{
+	/*	border: 1px solid #000;
+		width: 23px;
+		height: 23px;*/
+		background-color: #fff;
+	}
+</style>
+<body>
+	<div id="box">
+		
+	</div>
+</body>
+<script>
+	var box=$("#box");
+	var game=new snakeGame(box);
+	game.play();
+// 为什么同时按键会失败？？？
+</script>
+</html>

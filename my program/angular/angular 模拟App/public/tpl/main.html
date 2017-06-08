@@ -1,0 +1,91 @@
+<style>
+    .swiper-container {
+        width: 100vw;
+        height: 150px;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        height: auto;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .welcome{
+        display: block;
+        width:200px;height:30px;
+        text-align: center;
+        line-height: 30px;
+        position: fixed;
+        left:0;right:0;
+        margin:auto;bottom: 50px;
+        text-decoration: none;
+        border:1px solid #ccc;
+        border-radius: 5px;
+        color:#000;
+        background: linear-gradient(#fff,#ccc);
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">App</h1>
+</header>
+<div class="mui-content">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/img/mianfen.jpg" alt="" style="display:block;height: 150px">
+            </div>
+            <div class="swiper-slide">
+                <img src="/img/dami.jpg" alt="" style="display:block;height: 150px">
+            </div>
+            <div class="swiper-slide">
+                <img src="/img/you.jpg" alt="" style="display:block;height: 150px">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell mui-media" id="one">
+            <a href="#!/dami" class="damia">
+                <img class="mui-media-object mui-pull-right" src="/img/dami.jpg">
+                <div class="mui-media-body">
+                    大米
+                    <p class="mui-ellipsis">大米专卖区</p>
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <img class="mui-media-object mui-pull-right" src="/img/you.jpg">
+                <div class="mui-media-body">
+                    粮油
+                    <p class="mui-ellipsis">粮油专卖区</p>
+                </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <img class="mui-media-object mui-pull-right" src="/img/mianfen.jpg">
+                <div class="mui-media-body">
+                    面粉
+                    <p class="mui-ellipsis">面粉专卖区</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+

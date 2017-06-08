@@ -1,0 +1,16 @@
+body,ul,li,dd,dl,dt,p,h1,h2,h3,h4,h5,h6,input,div{
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-size:14px;
+    color:#333;
+}
+
+a{
+    text-decoration:none;
+    color:#333;
+}
+
+img{
+    border:0;
+}

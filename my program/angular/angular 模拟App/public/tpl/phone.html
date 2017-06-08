@@ -1,0 +1,76 @@
+<style>
+    .view-animate {
+        transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+        position: absolute;
+        width:100%;
+
+    }
+
+    .view-animate.ng-enter, .view-animate.ng-leave {
+        display:block;
+        top:0px;
+    }
+
+    .view-animate.ng-enter {
+        top:100%;
+    }
+    .view-animate.ng-enter.ng-enter-active {
+        top:0px;
+
+    }
+    .view-animate.ng-leave.ng-leave-active {
+
+        top:-100%;
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="#!/"></a>
+    <h1 class="mui-title">通讯录</h1>
+</header>
+<div class="mui-content">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="tel:12321321">
+                张三
+            </a>
+        </li>
+
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="tel:12321321">
+                张三
+            </a>
+        </li>
+
+
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="tel:12321321">
+                张三
+            </a>
+        </li>
+
+
+
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="tel:12321321">
+                张三
+            </a>
+        </li>
+
+
+
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="tel:12321321">
+                张三
+            </a>
+        </li>
+
+
+
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right" href="tel:12321321">
+                张三
+            </a>
+        </li>
+
+    </ul>
+</div>

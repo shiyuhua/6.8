@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3d</title>
+</head>
+<script>
+	window.onload=function(){
+		var box=document.querySelector(".box");
+		var h,w;
+		var temp=0,tempx=0,tempy=0,tempa=0;
+		var now;
+		h=document.documentElement.clientHeight;
+		w=document.documentElement.clientWidth;
+		document.body.style.height=h+"px"
+		document.onmousedown=function(e){
+			// var e=e||window.event;
+			// flag=true;
+				var nx=e.clientX;
+				var ny=e.clientY;
+			document.onmousemove=function(e){
+				// if (!flag) {
+				// 	return;
+				// }
+					x=e.clientX-w/2;
+					y=e.clientY-h/2;					
+				now=Math.sqrt((e.clientX-nx)*(e.clientX-nx)+(e.clientY-ny)*(e.clientY-ny));
+				// var div=document.createElement("div");
+				// div.style.cssText="width:10px;height:10px;background:red;position:absolute;left:"+(-y)+"px;top:"+x+"px;"
+				// document.body.appendChild(div)
+					// console.log(tempx,x,(tempx+x),tempy,(-y),((tempy+(-y))))
+				box.style.transform="rotate3d("+(-y)+","+(x)+",0,"+now+"deg)";
+				document.onmouseup=function(){
+					document.onmousemove=null;
+					document.onmouseup=null;
+					tempx=tempx+x;
+					tempy=tempy+y;
+					tempa=tempa+now;
+				}
+			}
+		}
+	}
+</script>
+<style>
+	body{
+		padding: 0;
+		margin: 0;
+		background: url(img/asd.jpg);
+		background-size: 100%;
+		perspective:800px;
+		transform-style: preserve-3d;
+		/*perspective-origin:center 300px;*/
+		/*height: 600px;*/
+	}
+
+	.box{
+		width: 200px;
+		height: 200px;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		transform-style:preserve-3D;
+		/*transition:transform 1s linear;*/
+		transform-origin:center center -100px;
+	}
+/*	.box1{
+		left: -300px;
+	}*/
+	.box2{
+		right: -300px;
+	}
+	.box3{
+		left: 900px;
+	}
+	.box4{
+		left: -900px;
+	}
+	.mian{
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		border-radius: 10px;
+	}
+	.top{
+		transform:rotateX(-90deg);
+		transform-origin:top;
+		background: url(img/1.png);
+	}
+	.bottom{
+		transform:rotateX(90deg);
+		transform-origin:bottom;
+		background: url(img/2.png);
+	}
+	.left{
+		transform:rotateY(90deg);
+		transform-origin:left;
+		background: url(img/3.png);
+	}
+	.right{
+		transform:rotateY(-90deg);
+		transform-origin:right;
+		background: url(img/4.png);
+	}
+	.front{
+		background: url(img/5.png);
+	}
+	.behind{
+		background: url(img/6.png);
+		transform:translateZ(-200px);
+	}
+/*	.box:hover{
+		transform:rotate3d(0,1,0,720deg)translateZ(600px);
+	}*/
+</style>
+<body>
+	<div class="box box1">
+		<div class="mian behind"></div>
+		<div class="mian bottom"></div>
+		<div class="mian left"></div>
+		<div class="mian right"></div>
+		<div class="mian front"></div>
+		<div class="mian top"></div>
+	</div>
+<!-- 	<div class="box box2">
+		<div class="mian behind"></div>
+		<div class="mian bottom"></div>
+		<div class="mian left"></div>
+		<div class="mian right"></div>
+		<div class="mian front"></div>
+		<div class="mian top"></div>
+	</div>
+	<div class="box box3">
+		<div class="mian behind"></div>
+		<div class="mian bottom"></div>
+		<div class="mian left"></div>
+		<div class="mian right"></div>
+		<div class="mian front"></div>
+		<div class="mian top"></div>
+	</div>
+	<div class="box box4">
+		<div class="mian behind"></div>
+		<div class="mian bottom"></div>
+		<div class="mian left"></div>
+		<div class="mian right"></div>
+		<div class="mian front"></div>
+		<div class="mian top"></div>
+	</div> -->
+</body>
+</html>
